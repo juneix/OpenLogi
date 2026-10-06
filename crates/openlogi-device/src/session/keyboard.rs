@@ -268,10 +268,8 @@ mod tests {
             .into_iter()
             .chain(reprog_controls::FORWARD_CIDS)
             .chain(reprog_controls::DPI_MODE_SHIFT_CIDS)
-            .chain([
-                reprog_controls::GESTURE_BUTTON_CID,
-                reprog_controls::HAPTIC_PANEL_CID,
-            ])
+            .chain(reprog_controls::GESTURE_BUTTON_CIDS)
+            .chain([reprog_controls::HAPTIC_PANEL_CID])
             .chain(RESERVED_KEYBOARD_CONTROLS)
             .collect();
         let claimed: Vec<_> = KNOWN_CONTROLS

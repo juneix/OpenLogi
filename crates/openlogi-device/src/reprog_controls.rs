@@ -43,6 +43,12 @@ pub const FEATURE_ID: u16 = 0x1b04;
 /// panel is [`HAPTIC_PANEL_CID`], not this CID.
 pub const GESTURE_BUTTON_CID: u16 = 0x00c3;
 
+/// All known gesture-button CIDs across Logitech models: `0x00c3`
+/// (`Mouse_Gesture_Button`, MX-line thumb button) and `0x00d0`
+/// (`MultiPlatform_Gesture_Button`, e.g. M720 Triathlon — verified against
+/// real hardware).
+pub const GESTURE_BUTTON_CIDS: [u16; 2] = [GESTURE_BUTTON_CID, 0x00d0];
+
 /// Control ID of the MX Master 4 Haptic Sense Panel — the touch-sensitive
 /// thumb rest that replaces the dedicated gesture button on that model.
 ///
